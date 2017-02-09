@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Simples favicon (.ico, .png or .gif) -->
+  <link rel="icon" type="image/x-icon" href="http://meusite.com/favicon.ico" />
+  <link rel="icon" type="image/png" href="http://meusite.com/favicon.png" />
+  <link rel="icon" type="image/gif" href="http://meusite.com/favicon.gif" />
+
+  <!-- Multiplos icons -->
+  <!-- Opera Speed Dial Favicon -->
+  <link rel="icon" type="image/png" href="/speeddial-160px.png" />
+			
+  <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+
+  <!-- iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+
+  <!-- iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+</head>
+<style>
+  
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font: 15px arial;
+  color: rgba(0, 0, 0, .7);
+}
+
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+
+  /* habilita o flex nos filhos diretos */
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  /* centraliza na vertical */
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  /* centraliza na horizontal */
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.wrapper div {
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, .3);
+  text-align: center;
+}
+.wrapper div h1 {
+  font-size: 128px;
+}
+</style>
+
+<body>
+<div class="wrapper">
+  <div>
+      <h1>Favicons</h1>
+  </div>
+</div>
+</body>
+</html>
