@@ -1,0 +1,93 @@
+<!-- 
+/***************************************************************************************
+* A questão refere-se a criação de um campo dinâmico onde um segundo select possui      
+* opção referênte ao primeiro select                                                      
+*                                                                                       
+* @author Ack Lay                                                                       
+*                                                                                       
+* Questão: http://pt.stackoverflow.com/questions/183525                                 
+*                                                                                       
+***************************************************************************************/-->
+<!DOCTYPE html>
+<head>
+  <script src="jquery-1.3.2.min.js"></script>
+  <script src="combo.js"></script>
+  <style>
+    label {
+      display:block;
+    }
+    label span {
+      font-weight:bold;
+      display:block;
+    }
+    select {
+      width:150px;
+    }
+    html, body {
+      height: 100%;
+      min-height: 100%;
+    }
+     
+    body {
+      font: 15px arial;
+      color: rgba(0, 0, 0, .7);
+    }     
+    .wrapper {
+      height: 100%;
+      min-height: 100%;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+     
+    .wrapper div {
+      padding: 40px;
+      border: 1px solid rgba(0, 0, 0, .3)
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+ <div class="wrapper">
+    <div>
+      <form action="" method="post">
+        <h1>Combo Dinâmico</h1>
+        <label><span>Tamanho:</span>
+          <select id="tamanho" name="tamanho">
+            <option selected="selected" value="0">Escolha um tamanho</option>
+            <option value="10">10 pessoas</option>
+            <option value="20">20 pessoas</option>
+            <option value="30">30 pessoas</option>
+        </select>
+       <br/><br/><span>Model:</span>
+         <select id="modelo" name="modelo">    
+            <option value="M1" class="10">Modelo 1</option>
+            <option value="MO" class="10">Outro Modelo</option>
+            <option value="MA" class="20">Modelo Aleatório</option>
+            <option value="M3" class="30">Modelo 2</option>
+            <option value="MA" class="30">Modelo 3</option>
+            <option selected="selected" value="0">Escolha um modelo</option>
+        </select>
+        </label>
+        <br />
+        <label><input type="submit" value="Procurar"  />
+      </form>
+   </div>
+  </div>
+</body>
+<script type="text/javascript">
+    $('#tamanho').on('change', function() {
+    var classe = this.value;
+    var options = $('#modelo option').remove();
+    options.each(function() {
+        var opt = $(this);
+        if (opt.hasClass(classe)) opt.show();
+        else opt.hide();
+    });
+    $('#modelo').append(options);
+});
+</script>
+</html>
