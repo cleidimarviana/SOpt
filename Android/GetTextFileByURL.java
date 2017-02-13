@@ -1,3 +1,11 @@
+/***************************************************************************************
+ * A questão refere-se regatar um texto e inserir em um TextView a partir de uma URL
+ *
+ * @author Ack Lay
+ *
+ * Questão: http://pt.stackoverflow.com/questions/183651/
+ *
+ ***************************************************************************************/
 package me.acklay;
 
 import android.os.AsyncTask;
